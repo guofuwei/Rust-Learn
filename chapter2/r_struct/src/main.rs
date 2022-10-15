@@ -1,8 +1,8 @@
 struct User {
-    active: bool,
+    _active: bool,
     username: String,
     email: String,
-    sign_in_count: u32,
+    _sign_in_count: u32,
 }
 
 fn main() {
@@ -12,15 +12,15 @@ fn main() {
         email: String::from("another@some.com"),
         ..user1
     };
-    println!("user.username:{}",user2.username);
-    println!("user.username:{}",user2.email);
+    println!("user.username:{}", user2.username);
+    println!("user.username:{}", user2.email);
 }
 
 fn build_user(email: String, username: String) -> User {
     User {
         email,
         username,
-        active: true,
-        sign_in_count: 1,
+        _active: true,
+        _sign_in_count: 1,
     }
 }
